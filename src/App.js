@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import OrganizationalChart from "./org-chart-1/components/orgChart";
+import employees from "./org-chart-1/data";
+
+const styles = {
+    title: {
+        backgroundColor: "#404e7c",
+        color: "#fef9ef",
+        textAlign: "center",
+        padding: "1rem",
+        fontSize: "1.5em",
+        zIndex: "1",
+    },
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1 style={styles.title}>Organization Chart</h1>
+        <OrganizationalChart data={employees} />
     </div>
   );
 }
